@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 
 class GSettingsTableViewController: UITableViewController, UITextFieldDelegate {
@@ -21,9 +20,7 @@ class GSettingsTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var txtCSUsername: UITextField!
     @IBOutlet weak var txtEmailAddress: UITextField!
     @IBOutlet weak var txtMobileNumber: UITextField!
-    
-    var titles = [NSManagedObject]()
-    
+        
     ///////////////////////  KEYBOARD DISMISS  /////////////////////////
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()

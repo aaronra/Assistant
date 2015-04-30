@@ -34,8 +34,6 @@
 		5DD578A81AE486680011630E /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD578A71AE486680011630E /* HRToast+UIView.swift */; };
 		5DD6950B1AC3D5A8004B7497 /* GSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6950A1AC3D5A8004B7497 /* GSettingsTableViewController.swift */; };
 		5DD6950D1AC3D882004B7497 /* TileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6950C1AC3D882004B7497 /* TileCell.swift */; };
-		5DFD6A2F1AE76D8900BC0318 /* MobileAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD6A2D1AE76D8900BC0318 /* MobileAssistant.xcdatamodeld */; };
-		5DFD6A311AE9B81500BC0318 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD6A301AE9B81500BC0318 /* Pages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +78,6 @@
 		5DD578A71AE486680011630E /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
 		5DD6950A1AC3D5A8004B7497 /* GSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSettingsTableViewController.swift; sourceTree = "<group>"; };
 		5DD6950C1AC3D882004B7497 /* TileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCell.swift; sourceTree = "<group>"; };
-		5DFD6A2E1AE76D8900BC0318 /* MobileAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileAssistant.xcdatamodel; sourceTree = "<group>"; };
-		5DFD6A301AE9B81500BC0318 /* Pages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +101,6 @@
 		5D202E3B1ABBBFE100375C9C = {
 			isa = PBXGroup;
 			children = (
-				5DFD6A321AE9B89400BC0318 /* Entities */,
 				5D202E461ABBBFE100375C9C /* Mobile Assistant */,
 				5D202E5C1ABBBFE100375C9C /* Mobile AssistantTests */,
 				5D202E451ABBBFE100375C9C /* Products */,
@@ -150,7 +145,6 @@
 				5D4F05701ADCF42E000D9916 /* StartupFourViewController.swift */,
 				5D4F05721ADCF43D000D9916 /* StartupFiveViewController.swift */,
 				5D4F05741ADE417B000D9916 /* TextEditorViewController.swift */,
-				5DFD6A2D1AE76D8900BC0318 /* MobileAssistant.xcdatamodeld */,
 			);
 			path = "Mobile Assistant";
 			sourceTree = "<group>";
@@ -195,14 +189,6 @@
 				5DD578A71AE486680011630E /* HRToast+UIView.swift */,
 			);
 			name = Toast;
-			sourceTree = "<group>";
-		};
-		5DFD6A321AE9B89400BC0318 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				5DFD6A301AE9B81500BC0318 /* Pages.swift */,
-			);
-			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +305,8 @@
 				5D3B0DC71AC92D1E00BD8464 /* DisclaimerViewController.swift in Sources */,
 				5D3B0DCF1AC9318100BD8464 /* HelpItemController.swift in Sources */,
 				5D4F05731ADCF43D000D9916 /* StartupFiveViewController.swift in Sources */,
-				5DFD6A2F1AE76D8900BC0318 /* MobileAssistant.xcdatamodeld in Sources */,
 				5D202E4A1ABBBFE100375C9C /* AppDelegate.swift in Sources */,
 				5D4F056F1ADCF41C000D9916 /* StartupThreeViewController.swift in Sources */,
-				5DFD6A311AE9B81500BC0318 /* Pages.swift in Sources */,
 				5D4F056D1ADCF3DE000D9916 /* StartupTwoViewController.swift in Sources */,
 				5D3B0DCB1AC92E7600BD8464 /* AboutAppViewController.swift in Sources */,
 				5DD3C2821ADB46FD00E8B864 /* IconCell.swift in Sources */,
@@ -537,19 +521,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5DFD6A2D1AE76D8900BC0318 /* MobileAssistant.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5DFD6A2E1AE76D8900BC0318 /* MobileAssistant.xcdatamodel */,
-			);
-			currentVersion = 5DFD6A2E1AE76D8900BC0318 /* MobileAssistant.xcdatamodel */;
-			path = MobileAssistant.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5D202E3C1ABBBFE100375C9C /* Project object */;
 }
