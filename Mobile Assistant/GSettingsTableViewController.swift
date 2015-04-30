@@ -53,36 +53,7 @@ class GSettingsTableViewController: UITableViewController, UITextFieldDelegate {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext!
-        
-        let fetchRequest = NSFetchRequest(entityName: "Pages")
-        
-        var error: NSError?
-        
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
-        
-        
-        
-        if let results = fetchedResults {
-            titles = results
-            
-            println(titles[0].valueForKey("title")!)
-        } else {
-            println("Could not fetch \(error), \(error!.userInfo)")
-        }
-        
-    }
-    
     @IBAction func back(sender: UIBarButtonItem) {
-        
-        if count(txtFirst.text) > 0 {
-            savePageTitle(txtFirst.text!)
-        }
         
         navigationController?.popViewControllerAnimated(true)
     }
@@ -120,27 +91,5 @@ class GSettingsTableViewController: UITableViewController, UITextFieldDelegate {
         txtThird.resignFirstResponder()
         txtYourEmail.resignFirstResponder()
     }
-    
-    func savePageTitle(title: String) {
-        
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext!
-        
-        let entity = NSEntityDescription.entityForName("Pages", inManagedObjectContext: managedContext)
-        
-        let pagetitle = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        pagetitle.setValue(title, forKey: "title")
-        
-        var error: NSError?
-        
-        if !managedContext.save(&error) {
-            println("Could not save \(error), \(error?.userInfo)")
-        }
-        
-        titles.append(pagetitle)
-    }
-    
     
 }
