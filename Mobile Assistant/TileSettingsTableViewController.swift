@@ -31,6 +31,7 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
     @IBOutlet weak var lblFourth: UILabel!
     @IBOutlet weak var lblFifth: UILabel!
     @IBOutlet weak var lblSched: UILabel!
+    @IBOutlet weak var lblXheader: UILabel!
         
     @IBOutlet weak var swSafetySend: UISwitch!
     
@@ -77,6 +78,10 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
             lblFifth.text = prefs.stringForKey("teValue")
         }
         
+        if prefs.stringForKey("TextEditor") == "Email Header" {
+            lblXheader.text = prefs.stringForKey("teValue")
+        }
+        
         prefs.setValue("", forKey: "teValue")
         prefs.setValue("", forKey: "TextEditor")
     }
@@ -93,6 +98,7 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
         lblFourth.text = "None"
         lblFifth.text = "None"
         lblSched.text = "None"
+        lblXheader.text = "None"
         
         selectedIcon = "add_new_tile_icon"
         
@@ -138,6 +144,7 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
         println("Schedule: \(lblSched.text!)")
         println("Send on Tap: \(sendOnTap)")
         println("Safety Send: \(safetySend)")
+        println("Email Header: \(lblXheader.text!)")
         
         prefs.setBool(false, forKey: "newTile")
         
@@ -152,7 +159,7 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 11
+        return 12
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -179,6 +186,8 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
         } else if (section == 9) {
             returnValue = 1
         } else if (section == 10) {
+            returnValue = 1
+        } else if (section == 11) {
             returnValue = 1
         }
         
@@ -240,6 +249,12 @@ class TileSettingsTableViewController: UITableViewController, UITextFieldDelegat
         }
         
         if indexPath == NSIndexPath(forRow: 0, inSection: 10) {
+            prefs.setValue("Email Header", forKey: "TextEditor")
+            prefs.setValue(lblXheader.text, forKey: "teValue")
+            self.performSegueWithIdentifier("toTextEditor", sender: self)
+        }
+        
+        if indexPath == NSIndexPath(forRow: 0, inSection: 11) {
             deleteTile()
         }
     }

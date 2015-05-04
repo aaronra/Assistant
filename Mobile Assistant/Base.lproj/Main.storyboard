@@ -862,14 +862,43 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Fwz-sc-bPr">
+                            <tableViewSection headerTitle="Advanced" id="Fwz-sc-bPr">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="FjS-Xm-4ke">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FjS-Xm-4ke" id="BuK-4T-M8Y">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete This Tile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-QU-SV1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Header" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-QU-SV1">
+                                                    <rect key="frame" x="15" y="13" width="92" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-Ll-E3N">
+                                                    <rect key="frame" x="442" y="10" width="150" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="KCw-Ll-E3N" secondAttribute="centerY" constant="1.5" id="MoB-GV-6kz"/>
+                                                <constraint firstItem="KCw-Ll-E3N" firstAttribute="trailing" secondItem="BuK-4T-M8Y" secondAttribute="trailingMargin" id="Pqe-Cr-gKC"/>
+                                                <constraint firstItem="Ppy-QU-SV1" firstAttribute="leading" secondItem="BuK-4T-M8Y" secondAttribute="leadingMargin" constant="7" id="jvm-sc-i06"/>
+                                                <constraint firstAttribute="centerY" secondItem="Ppy-QU-SV1" secondAttribute="centerY" constant="0.5" id="qUu-AN-534"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="ZRS-vA-Hcy">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="UYh-MP-6YS">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UYh-MP-6YS" id="ZPg-Xr-g17">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete This Tile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzg-C6-cD2">
                                                     <rect key="frame" x="15" y="13" width="105" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -877,8 +906,8 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ppy-QU-SV1" firstAttribute="leading" secondItem="BuK-4T-M8Y" secondAttribute="leadingMargin" constant="7" id="jvm-sc-i06"/>
-                                                <constraint firstAttribute="centerY" secondItem="Ppy-QU-SV1" secondAttribute="centerY" constant="0.5" id="qUu-AN-534"/>
+                                                <constraint firstItem="Hzg-C6-cD2" firstAttribute="leading" secondItem="ZPg-Xr-g17" secondAttribute="leadingMargin" constant="7" id="5E3-xq-vzm"/>
+                                                <constraint firstAttribute="centerY" secondItem="Hzg-C6-cD2" secondAttribute="centerY" constant="0.5" id="p0g-pq-qcL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -907,6 +936,7 @@
                         <outlet property="lblSched" destination="4Ix-IN-P3L" id="zrx-jX-nuA"/>
                         <outlet property="lblSecond" destination="wFT-Ka-YYD" id="AgT-4y-maD"/>
                         <outlet property="lblThird" destination="LZz-pP-UCz" id="mWN-tW-Xtp"/>
+                        <outlet property="lblXheader" destination="KCw-Ll-E3N" id="Lna-Xt-71a"/>
                         <outlet property="swSafetySend" destination="sT7-KO-6a6" id="EZ1-Hm-pFh"/>
                         <outlet property="txtEmailAddress" destination="bAX-2F-UKB" id="9RW-fg-CfX"/>
                         <outlet property="txtPhoneNumber" destination="9An-Md-xdJ" id="SXq-Qd-sMF"/>
